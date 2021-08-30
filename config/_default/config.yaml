@@ -1,0 +1,20 @@
+baseURL: "http://127.0.0.1:8080"
+languageCode: "en-us"
+title: "André de Moraes"
+author:
+  first_name: "André"
+  name: "André de Moraes"
+  email: "amancioandre@gmail.com"
+
+theme: "amnc"
+
+permalinks:
+  post: "/:slug"
+
+defaultContentLanguage: "en"
+
+markup:
+  tableOfContents:
+    endLevel: 2
+    ordered: true
+    startLevel: 2

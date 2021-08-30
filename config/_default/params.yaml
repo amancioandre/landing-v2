@@ -1,0 +1,12 @@
+address:
+    city: "Victoria"
+    state: "BC"
+    country: "Canada"
+    # Font Awesome Icons
+    icon: "fab fa-canadian-maple-leaf"
+    iconColor: "text-white"
+    color: "red"
+    url: "https://www.victoria.ca/#"
+
+mailchimp:
+    url: "https://gmail.us5.list-manage.com/subscribe/post?u=7e99b339d496a6c7b1139d4fc&amp;id=6cb1abe378"
