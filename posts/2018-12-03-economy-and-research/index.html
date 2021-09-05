@@ -1,478 +1,62 @@
-<!DOCTYPE html>
-
-</html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    
-    
-    
-    <link rel="stylesheet" href="/css/styles.min.690a841b9133288485bbf931cd6128c9170b8363dd29499475b06225cc00eac0.css" integrity="sha256-aQqEG5EzKISFu/kxzWEoyRcLg2PdKUmUdbBiJcwA6sA=" />
-    
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-    <script src="https://unpkg.com/dayjs@1.8.21/plugin/relativeTime.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    
-    <script src="/js/numbers.min.js"></script>
-
-    
-    <script src="/js/api.min.js"></script>
-</head>
-
-<body>
-    <header>
-    <div class="hidden lg:block">
-        <style>
-    .scale-in-center {
-        -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    }
-
-     
-
-     
-    @-webkit-keyframes scale-in-center {
-        0% {
-            -webkit-transform: scale(0);
-            transform: scale(0);
-            opacity: 1;
-        }
-
-        100% {
-            -webkit-transform: scale(1);
-            transform: scale(1);
-            opacity: 1;
-        }
-    }
-
-    @keyframes scale-in-center {
-        0% {
-            -webkit-transform: scale(0);
-            transform: scale(0);
-            opacity: 1;
-        }
-
-        100% {
-            -webkit-transform: scale(1);
-            transform: scale(1);
-            opacity: 1;
-        }
-    }
-</style>
-
-<a class="absolute top-0 right-16" href="https://www.victoria.ca/#" target="_blank">
-    <div class="absolute bg-red-500 transform rotate-45 shadow-lg"
-        style="top: 34px; left: 6px; width: 28px; height: 28px;">
-    </div>
-    <div id="flag"
-        class="w-10 h-12 bg-red-500 text-center text-light text-2xl py-3 transform">
-        <i class="fab fa-canadian-maple-leaf text-white"></i>
-    </div>
-</a>
-<span id="flag-text" class="
-        hidden
-        absolute
-        top-14
-        right-24
-        text-xs
-        w-28
-        p-2
-        rounded-sm
-        transform
-        transition-all
-        duration-300
-        ease-in-out
-        ">
-    Currently living in <b>
-        Victoria</b>,
-    BC,
-    Canada </span>
-
-<script>
-    const flag = document.getElementById("flag")
-    const flagText = document.getElementById("flag-text")
-
-    flag.addEventListener("mouseenter", () => {
-        flagText.classList.replace("hidden", "block")
-        flagText.classList
-    })
-
-    flag.addEventListener("mouseleave", () => {
-        flagText.classList.replace("block", "hidden")
-    })
-</script>
-    </div>
-    <aside id="sidedrawer" class="
-    transform
-    absolute
-    top-14
-    left-0
-    bg-white
-    z-50
-    w-full
-    min-h-screen
-    ease-in-out
-    transition-all
-    duration-300
-    -translate-x-full
-    ">
-    <div class="px-8 mt-4">
-        <div class="flex flex-col">
-            <ul class="
-            flex 
-            flex-col 
-            justify-around
-            content-start
-            text-sm
-            h-20
-            ">
-                <li class="px-2 lowercase hover:text-red-500 ">
-    <a href="http://127.0.0.1:8080/">Home</a>
-</li><li class="px-2 lowercase hover:text-red-500 ">
-    <a href="http://127.0.0.1:8080/about">About</a>
-</li><li class="px-2 lowercase hover:text-red-500 ">
-    <a href="http://127.0.0.1:8080/categories">Explore</a>
-</li>
-            </ul>
-            <ul class="
-                mt-6
-                flex
-                flex-none
-                justify-start
-                content-start
-                text-2xl
-            ">
-                <li class="hover:animate-bounce">
-    <a href="https://www.linkedin.com/amancioandre" target="_blank">
-        <i class="px-2 fab fa-linkedin-in hover:text-red-500"></i>
-    </a>
-</li>
-<li class="hover:animate-bounce">
-    <a href="https://www.instagram.com/andre_amoraes" target="_blank">
-        <i class="px-2 fab fa-instagram hover:text-red-500"></i>
-    </a>
-</li>
-<li class="hover:animate-bounce">
-    <a href="https://www.github.com/amancioandre" target="_blank">
-        <i class="px-2 fab fa-github-alt hover:text-red-500"></i>
-    </a>
-</li>
-            </ul>
-        </div>
-    </div>
-</aside>
-    <nav class="mb-4">
-        <div class="max-w-5xl mx-auto px-2 sm:px-6 lg:px-8">
-            <div class="relative flex items-center justify-between h-16">
-                
-                <div class="w-full sm:hidden px-6 flex justify-between">
-                    
-                    <div id="menu-burger" class="cursor-pointer hover:text-red-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </div>
-                    <div class="w-full flex justify-center">
-                        <p class="font-sans tracking tighter text-3xl">André de Moraes</p>
-                    </div>
-                </div>
-                
-                <div class="
-                        w-full
-                        hidden
-                        sm:flex
-                        flex-row
-                        flex-nowrap
-                        justify-end
-                        items-center
-                    ">
-                    <div class="self-center mr-auto">
-                        <p class="font-sans tracking tighter text-xl">André de Moraes</p>
-                    </div>
-                    <ul class=" flex flex-none justify-center content-center items-center text-xs">
-                        <li class="px-2 lowercase hover:text-red-500 ">
-    <a href="http://127.0.0.1:8080/">Home</a>
-</li><li class="px-2 lowercase hover:text-red-500 ">
-    <a href="http://127.0.0.1:8080/about">About</a>
-</li><li class="px-2 lowercase hover:text-red-500 ">
-    <a href="http://127.0.0.1:8080/categories">Explore</a>
-</li> </ul>
-                    <ul class="ml-6 flex flex-none justify-center content-center text-lg">
-                        <li class="hover:animate-bounce">
-    <a href="https://www.linkedin.com/amancioandre" target="_blank">
-        <i class="px-2 fab fa-linkedin-in hover:text-red-500"></i>
-    </a>
-</li>
-<li class="hover:animate-bounce">
-    <a href="https://www.instagram.com/andre_amoraes" target="_blank">
-        <i class="px-2 fab fa-instagram hover:text-red-500"></i>
-    </a>
-</li>
-<li class="hover:animate-bounce">
-    <a href="https://www.github.com/amancioandre" target="_blank">
-        <i class="px-2 fab fa-github-alt hover:text-red-500"></i>
-    </a>
-</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <script>
-        let isOpen = false
-        const openSideDrawer = () => {
-            const sidedrawer = document.getElementById("sidedrawer")
-            if (!isOpen) {
-                sidedrawer.classList.replace("-translate-x-full", "translate-x-0")
-            } else {
-                sidedrawer.classList.replace("translate-x-0", "-translate-x-full")
-            }
-            isOpen = !isOpen
-        }
-
-        document.getElementById("menu-burger").addEventListener("click", openSideDrawer)
-    </script>
-</header>
-    
-
-<div class="max-w-5xl mx-auto px-2 sm:px-6 lg:px-8 mb-6 mt-4">
-    <div class="flex justify-center">
-        
-        <aside class="hidden sm:block w-1/5 pr-4">
-    <div class="mb-6">
-        <h3 class="text-lg font-bold mb-2">About</h3>
-        <p class="text-xs">
-            An example about
-        </p>
-    </div>
-    <div class="sticky top-6 max-h-64">
-        
-        <h3 class="text-lg font-bold mb-2">Contents</h3>
-        <p class="text-xs hover:text-red-500">
-            <nav id="TableOfContents">
-  <ol>
-    <li><a href="#1-converging-forces">1. Converging Forces</a></li>
-    <li><a href="#2-strategy">2. Strategy</a></li>
-    <li><a href="#3-research-and-business">3. Research and Business</a></li>
-    <li><a href="#4-break-the-entrance-barrier-to-the-clound">4. Break the entrance barrier to the Clound</a></li>
-    <li><a href="#5-brazil-is-behind">5. Brazil is Behind</a></li>
-    <li><a href="#6-2-gdp-for-research">6. 2% GDP for Research</a></li>
-    <li><a href="#7-brazilian-vocation">7. Brazilian Vocation</a></li>
-    <li><a href="#reference">Reference</a></li>
-  </ol>
-</nav>
-        </p>
-        
-        <h3 class="text-lg font-bold mt-6 mb-2">More posts about</h3>
-        <div class="text-xs mb-6">
-            <ul>
-                
-                
-                <li class="hover:text-red-500">
-                    <a href="/categories/economy">Economy</a>
-                </li>
-                
-                
-                
-                <li class="hover:text-red-500">
-                    <a href="/categories/research">Research</a>
-                </li>
-                
-                
-                
-                <li class="hover:text-red-500">
-                    <a href="/categories/tecnology">Tecnology</a>
-                </li>
-                
-                
-            </ul>
-        </div>
-        <div class="flex justify-end">
-            
-            <button id="share-button" class="m-2 cursor-pointer">
-                <div id="tooltip" class="opacity-0 text-xs text-gray-500">
-                    copied!
-                </div>
-                <div class="hover:text-red-500 flex justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-        d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
-</svg>
-                </div>
-            </button>
-        </div>
-    </div>
-</aside>
-
-<script>
-    const shareButton = document.getElementById("share-button")
-    const tooltip = document.getElementById("tooltip")
-
-    const copyToClipboard = () => {
-        navigator.clipboard.writeText(window.location)
-        tooltip.classList.replace("opacity-0", "animate-fade-in-up")
-
-        setTimeout(() => {
-            tooltip.classList.replace("animate-fade-in-up", "opacity-0")
-        }, 650)
-    }
-
-    shareButton.addEventListener("click", copyToClipboard)
-</script>
-        <article class="sm:w-4/5 pl-4">
-    <header>
-        <h1 class="text-4xl font-bold mt-0 mb-0">Economy and Research must be Integrated</h1>
-        <time datetime='2018-12-03 18:45'>
-            <span class="text-sm text-gray-400">
-                December 3, 2018 18:45
-            </span>
-        </time>
-    </header>
-    <div class="my-8">
-        <p>That was the headline from Valor&rsquo;s article on tendencies from October, 2018, that struck me earlier this month and kept me thinking about the time I spent doing research for my master degree. Let me resume the Ediane Tiago’s article main points for you and hopefully we will start building up ground for how to tackle Brazilian politics on innovation.</p>
-<!-- raw HTML omitted -->
-<figure>
-    <img src="https://miro.medium.com/max/4896/0*Y9v4_7v357dFeOQQ"/> 
-</figure>
-
-<h2 id="1-converging-forces">1. Converging Forces</h2>
-<p>Ediane Tiago states that Brazilian economy is going to face two converging forces: advances on digitization and on science, both interdependent but rather miscoordinated either by government or corporations. A sustainable economic growth will demand alignment of both sectors, private and public as well as budged stability on science, technology and innovation.</p>
-<h2 id="2-strategy">2. Strategy</h2>
-<p>It is strategic: first world countries treat the subject with a hot line, directly with the presidency cabinet. Ruas, director of Latam relations of IBM reinforces that it is important to reinvent government, industry and services. “It’s time to act”, says. Digitization is a mean to create streams of knowledge transfer and business generation within layers of markets, it drags along scalability and high productivity through spreading development on applications, also within clouds and IoT, blockchain, A.I and big data. On Ediane’s own words: “They all have in common the strategy to suck data from the most diverse areas, from agribusiness to finance sectors”. Combine all these markets to see how big is the opportunity ecosystem.</p>
-<h2 id="3-research-and-business">3. Research and Business</h2>
-<p>Combine research to business. Business, specially cutting edge ones based on startups generate huge amounts of data, it only needs to be harvested as we do with crops. Seeds for Science, once studied, the potential of new discoveries is immense, and they will be powered by A.I. and machine learning algorithms.</p>
-<h2 id="4-break-the-entrance-barrier-to-the-clound">4. Break the entrance barrier to the Clound</h2>
-<p>Break the entrance barrier entering from the Cloud. There is no need to make high cost spending into infrastructure anymore, and that is game changing. Just adopt the shared use of computer power to deliver your application and scale as you need.</p>
-<h2 id="5-brazil-is-behind">5. Brazil is Behind</h2>
-<p>Brazil, unfortunately, is behind. We figure on the 64th position of the Worlds innovation ranking (IGI), behind South Africa and Mexico. Our Latin America neighbor Chile stands on the 47th position, just engaging Russia for the 46th position and Portugal occupy the 32th ranking. Israel, the 55th economy in the world ranks as 11th. Back in 2011, we were the 47th on the same ranking. It’s absolutely not compatible with our position as 9º economy in the world, as quoted by Gianna Sagazio from CNI (National Industry Confederation). Edianes argument is that State must promote and incentive scientific development but after each year tax adjustments steal resources from research and development of public spending. And this routine has been undermining innovation as an <a href="https://www.cepal.org/noticias/articulos/1/5471/anticyclical-ros-marzo25.pdf">anticyclical strategy</a>.</p>
-<h2 id="6-2-gdp-for-research">6. 2% GDP for Research</h2>
-<p>The worlds minimum percentual of GDP, among countries competing on technology, applied to development and research is 2%. Brazil is striving to accommodate 1.2%, while South Korea dumps 4.24% from an economy worth of 1.54 trillion USD (Brazil’s worth 2 trillion USD). Roughly 41 billion USD of extra spending on the South Korean technology ecosystem. Compare this amount on a area basis and we get a massive amount of targeted capital. The Chinese understood this and are ahead. As shown by OECD, they leaped from 0.89% to 2.12% on sixteen years and their economy is worth, today, 12.2 trillion USD. It’s 258 billion USD spent on R&amp;D. Every year.</p>
-<h2 id="7-brazilian-vocation">7. Brazilian Vocation</h2>
-<p>Brazil has a vocation, but innovation demands dicipline. It’s true that Brazilian agribusiness is powerful, but we drive spearpoints in other areas too: renewable energy, like biofuels, and health. We have also brains: Brazilian scientific production is of high quality. Universities like UNICAMP, USP, and I am also adding UFSC, produce science of high impact. Please take a moment to search on the CAPES database of scientific production to see that we are a flourishing environment of good ideas and research in a myriad of topics.</p>
-<h3 id="to-conclude">To conclude,</h3>
-<p>Somewhere along the road we took a wrong turn, industry and financial confidence in the government failed and the so important partnership — Enterprise, Government and University — went amiss. But we are resilient, Brazilian startups are growing in numbers and in importance. They are trying to give answer to these problems we are facing with scientific backgrounds and truly innovative Business Models, like Nubank’s. People who aimed at agribusiness are harvesting great income and those investing on sustainable mobility and services see their consumer base increasing. Our government, however, needs to wake up to this strategic necessity and really rescue our research: investing money and human capital.</p>
-<p>It will always be late if we don’t begin.</p>
-<h2 id="reference">Reference</h2>
-<blockquote>
-<p>Tiago, Ediane. (2018). “Economia e Pesquisa devem ser Integradas”. Valor Especial, outubro 2018, pg. 11–14.</p>
-</blockquote>
-
-
-        <br>
-        <span class="text-xl">
-            🍻
-        </span>
-        <br>
-        <span class="text-sm">André</span>
-    </div>
-</article>
-        
-    </div>
-</div>
-
-
-    <footer class="relative bottom-0 w-full">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between flex-col">
-            
-            <div class="w-full sm:hidden px-6 flex flex-col content-center">
-                <div class="mb-1">
-                    <p class="text-xs">Please, consider subscribing:</p>
-                </div>
-                
-
-<div id="mc_embed_signup">
-    <form action="https://gmail.us5.list-manage.com/subscribe/post?u=7e99b339d496a6c7b1139d4fc&amp;amp;id=6cb1abe378" method="post" id="mc-embedded-subscribe-form"
-        name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll" class="flex">
-            <div
-                class="mc-field-group sm:max-w-lg w-full rounded-l-lg pl-2 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white text-xs outline-none flex">
-                <input type="email" value="" name="EMAIL" class="required email outline-none w-full focus:bg-white"
-                    placeholder='yourbest@email.com' id="mce-EMAIL">
-            </div>
-            
-            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                    name="b_7e99b339d496a6c7b1139d4fc_6cb1abe378" tabindex="-1" value=""></div>
-            <div
-                class="clear cursor-pointer px-4 rounded-r-lg bg-red-400 hover:bg-red-500 p-3  border-red-500 border-t border-r ">
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                    class="button text-white text-xs uppercase bg-transparent font-bold cursor-pointer">
-            </div>
-        </div>
-    </form>
-    <div id="mce-responses" class="clear">
-        <div class="response" id="mce-error-response" style="display:none"></div>
-        <div class="response" id="mce-success-response" style="display:none"></div>
-    </div>
-</div>
-
-
-            </div>
-            
-            <div class="
-                    w-full
-                    hidden
-                    sm:flex
-                    flex-nowrap
-                    justify-center
-                    content-center
-                ">
-                <div>
-                    <div class="mb-1">
-                        <p class="text-xs max-w-sm">
-                            Hey, you&#39;ve reached all the way down here! If you liked the content, please, consider subscribing!
-                        </p>
-                    </div>
-                    
-
-<div id="mc_embed_signup">
-    <form action="https://gmail.us5.list-manage.com/subscribe/post?u=7e99b339d496a6c7b1139d4fc&amp;amp;id=6cb1abe378" method="post" id="mc-embedded-subscribe-form"
-        name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll" class="flex">
-            <div
-                class="mc-field-group sm:max-w-lg w-full rounded-l-lg pl-2 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white text-xs outline-none flex">
-                <input type="email" value="" name="EMAIL" class="required email outline-none w-full focus:bg-white"
-                    placeholder='yourbest@email.com' id="mce-EMAIL">
-            </div>
-            
-            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                    name="b_7e99b339d496a6c7b1139d4fc_6cb1abe378" tabindex="-1" value=""></div>
-            <div
-                class="clear cursor-pointer px-4 rounded-r-lg bg-red-400 hover:bg-red-500 p-3  border-red-500 border-t border-r ">
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                    class="button text-white text-xs uppercase bg-transparent font-bold cursor-pointer">
-            </div>
-        </div>
-    </form>
-    <div id="mce-responses" class="clear">
-        <div class="response" id="mce-error-response" style="display:none"></div>
-        <div class="response" id="mce-success-response" style="display:none"></div>
-    </div>
-</div>
-
-
-                </div>
-            </div>
-            <div class="border-t border-gray-300 mt-4 text-xs text-center p-4">
-                All rights reserved. <b>&copy;</b>
-                André de Moraes,
-                2021
-            </div>
-        </div>
-    </div>
-</footer>
-</body>
-
-</html>
+<!doctype html></html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><link rel=stylesheet href=/css/styles.min.690a841b9133288485bbf931cd6128c9170b8363dd29499475b06225cc00eac0.css integrity="sha256-aQqEG5EzKISFu/kxzWEoyRcLg2PdKUmUdbBiJcwA6sA="><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://unpkg.com/dayjs@1.8.21/dayjs.min.js></script><script src=https://unpkg.com/dayjs@1.8.21/plugin/relativeTime.js></script><script src=https://unpkg.com/axios/dist/axios.min.js></script><script src=/js/numbers.min.js></script><script src=/js/api.min.js></script></head><body><header><div class="hidden lg:block"><style>.scale-in-center{-webkit-animation:scale-in-center .5s cubic-bezier(0.250,0.460,0.450,0.940)both;animation:scale-in-center .5s cubic-bezier(0.250,0.460,0.450,0.940)both}@-webkit-keyframes scale-in-center{0%{-webkit-transform:scale(0);transform:scale(0);opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}@keyframes scale-in-center{0%{-webkit-transform:scale(0);transform:scale(0);opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}</style><a class="absolute top-0 right-16" href=https://www.victoria.ca/# target=_blank><div class="absolute bg-red-500 transform rotate-45 shadow-lg" style=top:34px;left:6px;width:28px;height:28px></div><div id=flag class="w-10 h-12 bg-red-500 text-center text-light text-2xl py-3 transform"><i class="fab fa-canadian-maple-leaf text-white"></i></div></a><span id=flag-text class="hidden
+absolute
+top-14
+right-24
+text-xs
+w-28
+p-2
+rounded-sm
+transform
+transition-all
+duration-300
+ease-in-out">Currently living in <b>Victoria</b>,
+BC,
+Canada</span>
+<script>const flag=document.getElementById("flag")
+const flagText=document.getElementById("flag-text")
+flag.addEventListener("mouseenter",()=>{flagText.classList.replace("hidden","block")
+flagText.classList})
+flag.addEventListener("mouseleave",()=>{flagText.classList.replace("block","hidden")})</script></div><aside id=sidedrawer class="transform
+absolute
+top-14
+left-0
+bg-white
+z-50
+w-full
+min-h-screen
+ease-in-out
+transition-all
+duration-300
+-translate-x-full"><div class="px-8 mt-4"><div class="flex flex-col"><ul class="flex
+flex-col
+justify-around
+content-start
+text-sm
+h-20"><li class="px-2 lowercase hover:text-red-500"><a href=http://127.0.0.1:8080/>Home</a></li><li class="px-2 lowercase hover:text-red-500"><a href=http://127.0.0.1:8080/about>About</a></li><li class="px-2 lowercase hover:text-red-500"><a href=http://127.0.0.1:8080/categories>Explore</a></li></ul><ul class="mt-6
+flex
+flex-none
+justify-start
+content-start
+text-2xl"><li class=hover:animate-bounce><a href=https://www.linkedin.com/amancioandre target=_blank><i class="px-2 fab fa-linkedin-in hover:text-red-500"></i></a></li><li class=hover:animate-bounce><a href=https://www.instagram.com/andre_amoraes target=_blank><i class="px-2 fab fa-instagram hover:text-red-500"></i></a></li><li class=hover:animate-bounce><a href=https://www.github.com/amancioandre target=_blank><i class="px-2 fab fa-github-alt hover:text-red-500"></i></a></li></ul></div></div></aside><nav class=mb-4><div class="max-w-5xl mx-auto px-2 sm:px-6 lg:px-8"><div class="relative flex items-center justify-between h-16"><div class="w-full sm:hidden px-6 flex justify-between"><div id=menu-burger class="cursor-pointer hover:text-red-500"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentcolor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg></div><div class="w-full flex justify-center"><p class="font-sans tracking tighter text-3xl">André de Moraes</p></div></div><div class="w-full
+hidden
+sm:flex
+flex-row
+flex-nowrap
+justify-end
+items-center"><div class="self-center mr-auto"><p class="font-sans tracking tighter text-xl">André de Moraes</p></div><ul class="flex flex-none justify-center content-center items-center text-xs"><li class="px-2 lowercase hover:text-red-500"><a href=http://127.0.0.1:8080/>Home</a></li><li class="px-2 lowercase hover:text-red-500"><a href=http://127.0.0.1:8080/about>About</a></li><li class="px-2 lowercase hover:text-red-500"><a href=http://127.0.0.1:8080/categories>Explore</a></li></ul><ul class="ml-6 flex flex-none justify-center content-center text-lg"><li class=hover:animate-bounce><a href=https://www.linkedin.com/amancioandre target=_blank><i class="px-2 fab fa-linkedin-in hover:text-red-500"></i></a></li><li class=hover:animate-bounce><a href=https://www.instagram.com/andre_amoraes target=_blank><i class="px-2 fab fa-instagram hover:text-red-500"></i></a></li><li class=hover:animate-bounce><a href=https://www.github.com/amancioandre target=_blank><i class="px-2 fab fa-github-alt hover:text-red-500"></i></a></li></ul></div></div></div></nav><script>let isOpen=false
+const openSideDrawer=()=>{const sidedrawer=document.getElementById("sidedrawer")
+if(!isOpen){sidedrawer.classList.replace("-translate-x-full","translate-x-0")}else{sidedrawer.classList.replace("translate-x-0","-translate-x-full")}
+isOpen=!isOpen}
+document.getElementById("menu-burger").addEventListener("click",openSideDrawer)</script></header><div class="max-w-5xl mx-auto px-2 sm:px-6 lg:px-8 mb-6 mt-4"><div class="flex justify-center"><aside class="hidden sm:block w-1/5 pr-4"><div class=mb-6><h3 class="text-lg font-bold mb-2">About</h3><p class=text-xs>An example about</p></div><div class="sticky top-6 max-h-64"><h3 class="text-lg font-bold mb-2">Contents</h3><p class="text-xs hover:text-red-500"><nav id=TableOfContents><ol><li><a href=#1-converging-forces>1. Converging Forces</a></li><li><a href=#2-strategy>2. Strategy</a></li><li><a href=#3-research-and-business>3. Research and Business</a></li><li><a href=#4-break-the-entrance-barrier-to-the-clound>4. Break the entrance barrier to the Clound</a></li><li><a href=#5-brazil-is-behind>5. Brazil is Behind</a></li><li><a href=#6-2-gdp-for-research>6. 2% GDP for Research</a></li><li><a href=#7-brazilian-vocation>7. Brazilian Vocation</a></li><li><a href=#reference>Reference</a></li></ol></nav></p><h3 class="text-lg font-bold mt-6 mb-2">More posts about</h3><div class="text-xs mb-6"><ul><li class=hover:text-red-500><a href=/categories/economy>Economy</a></li><li class=hover:text-red-500><a href=/categories/research>Research</a></li><li class=hover:text-red-500><a href=/categories/tecnology>Tecnology</a></li></ul></div><div class="flex justify-end"><button id=share-button class="m-2 cursor-pointer"><div id=tooltip class="opacity-0 text-xs text-gray-500">copied!</div><div class="hover:text-red-500 flex justify-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentcolor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12s-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684 6.632 3.316m-6.632-6 6.632-3.316m0 016m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" /></svg></div></button></div></div></aside><script>const shareButton=document.getElementById("share-button")
+const tooltip=document.getElementById("tooltip")
+const copyToClipboard=()=>{navigator.clipboard.writeText(window.location)
+tooltip.classList.replace("opacity-0","animate-fade-in-up")
+setTimeout(()=>{tooltip.classList.replace("animate-fade-in-up","opacity-0")},650)}
+shareButton.addEventListener("click",copyToClipboard)</script><article class="sm:w-4/5 pl-4"><header><h1 class="text-4xl font-bold mt-0 mb-0">Economy and Research must be Integrated</h1><time datetime="2018-12-03 18:45"><span class="text-sm text-gray-400">December 3, 2018 18:45</span></time></header><div class=my-8><p>That was the headline from Valor&rsquo;s article on tendencies from October, 2018, that struck me earlier this month and kept me thinking about the time I spent doing research for my master degree. Let me resume the Ediane Tiago’s article main points for you and hopefully we will start building up ground for how to tackle Brazilian politics on innovation.</p><figure><img src=https://miro.medium.com/max/4896/0*Y9v4_7v357dFeOQQ></figure><h2 id=1-converging-forces>1. Converging Forces</h2><p>Ediane Tiago states that Brazilian economy is going to face two converging forces: advances on digitization and on science, both interdependent but rather miscoordinated either by government or corporations. A sustainable economic growth will demand alignment of both sectors, private and public as well as budged stability on science, technology and innovation.</p><h2 id=2-strategy>2. Strategy</h2><p>It is strategic: first world countries treat the subject with a hot line, directly with the presidency cabinet. Ruas, director of Latam relations of IBM reinforces that it is important to reinvent government, industry and services. “It’s time to act”, says. Digitization is a mean to create streams of knowledge transfer and business generation within layers of markets, it drags along scalability and high productivity through spreading development on applications, also within clouds and IoT, blockchain, A.I and big data. On Ediane’s own words: “They all have in common the strategy to suck data from the most diverse areas, from agribusiness to finance sectors”. Combine all these markets to see how big is the opportunity ecosystem.</p><h2 id=3-research-and-business>3. Research and Business</h2><p>Combine research to business. Business, specially cutting edge ones based on startups generate huge amounts of data, it only needs to be harvested as we do with crops. Seeds for Science, once studied, the potential of new discoveries is immense, and they will be powered by A.I. and machine learning algorithms.</p><h2 id=4-break-the-entrance-barrier-to-the-clound>4. Break the entrance barrier to the Clound</h2><p>Break the entrance barrier entering from the Cloud. There is no need to make high cost spending into infrastructure anymore, and that is game changing. Just adopt the shared use of computer power to deliver your application and scale as you need.</p><h2 id=5-brazil-is-behind>5. Brazil is Behind</h2><p>Brazil, unfortunately, is behind. We figure on the 64th position of the Worlds innovation ranking (IGI), behind South Africa and Mexico. Our Latin America neighbor Chile stands on the 47th position, just engaging Russia for the 46th position and Portugal occupy the 32th ranking. Israel, the 55th economy in the world ranks as 11th. Back in 2011, we were the 47th on the same ranking. It’s absolutely not compatible with our position as 9º economy in the world, as quoted by Gianna Sagazio from CNI (National Industry Confederation). Edianes argument is that State must promote and incentive scientific development but after each year tax adjustments steal resources from research and development of public spending. And this routine has been undermining innovation as an <a href=https://www.cepal.org/noticias/articulos/1/5471/anticyclical-ros-marzo25.pdf>anticyclical strategy</a>.</p><h2 id=6-2-gdp-for-research>6. 2% GDP for Research</h2><p>The worlds minimum percentual of GDP, among countries competing on technology, applied to development and research is 2%. Brazil is striving to accommodate 1.2%, while South Korea dumps 4.24% from an economy worth of 1.54 trillion USD (Brazil’s worth 2 trillion USD). Roughly 41 billion USD of extra spending on the South Korean technology ecosystem. Compare this amount on a area basis and we get a massive amount of targeted capital. The Chinese understood this and are ahead. As shown by OECD, they leaped from 0.89% to 2.12% on sixteen years and their economy is worth, today, 12.2 trillion USD. It’s 258 billion USD spent on R&D. Every year.</p><h2 id=7-brazilian-vocation>7. Brazilian Vocation</h2><p>Brazil has a vocation, but innovation demands dicipline. It’s true that Brazilian agribusiness is powerful, but we drive spearpoints in other areas too: renewable energy, like biofuels, and health. We have also brains: Brazilian scientific production is of high quality. Universities like UNICAMP, USP, and I am also adding UFSC, produce science of high impact. Please take a moment to search on the CAPES database of scientific production to see that we are a flourishing environment of good ideas and research in a myriad of topics.</p><h3 id=to-conclude>To conclude,</h3><p>Somewhere along the road we took a wrong turn, industry and financial confidence in the government failed and the so important partnership — Enterprise, Government and University — went amiss. But we are resilient, Brazilian startups are growing in numbers and in importance. They are trying to give answer to these problems we are facing with scientific backgrounds and truly innovative Business Models, like Nubank’s. People who aimed at agribusiness are harvesting great income and those investing on sustainable mobility and services see their consumer base increasing. Our government, however, needs to wake up to this strategic necessity and really rescue our research: investing money and human capital.</p><p>It will always be late if we don’t begin.</p><h2 id=reference>Reference</h2><blockquote><p>Tiago, Ediane. (2018). “Economia e Pesquisa devem ser Integradas”. Valor Especial, outubro 2018, pg. 11–14.</p></blockquote><br><span class=text-xl>🍻</span><br><span class=text-sm>André</span></div></article></div></div><footer class="relative bottom-0 w-full"><div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8"><div class="flex items-center justify-between flex-col"><div class="w-full sm:hidden px-6 flex flex-col content-center"><div class=mb-1><p class=text-xs>Please, consider subscribing:</p></div><div id=mc_embed_signup><form action="https://gmail.us5.list-manage.com/subscribe/post?u=7e99b339d496a6c7b1139d4fc&amp;amp;id=6cb1abe378" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form class=validate target=_blank novalidate><div id=mc_embed_signup_scroll class=flex><div class="mc-field-group sm:max-w-lg w-full rounded-l-lg pl-2 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white text-xs outline-none flex"><input type=email name=EMAIL class="required email outline-none w-full focus:bg-white" placeholder=yourbest@email.com id=mce-EMAIL></div><div style=position:absolute;left:-5000px aria-hidden=true><input type=text name=b_7e99b339d496a6c7b1139d4fc_6cb1abe378 tabindex=-1></div><div class="clear cursor-pointer px-4 rounded-r-lg bg-red-400 hover:bg-red-500 p-3 border-red-500 border-t border-r"><input type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe class="button text-white text-xs uppercase bg-transparent font-bold cursor-pointer"></div></div></form><div id=mce-responses class=clear><div class=response id=mce-error-response style=display:none></div><div class=response id=mce-success-response style=display:none></div></div></div></div><div class="w-full
+hidden
+sm:flex
+flex-nowrap
+justify-center
+content-center"><div><div class=mb-1><p class="text-xs max-w-sm">Hey, you've reached all the way down here! If you liked the content, please, consider subscribing!</p></div><div id=mc_embed_signup><form action="https://gmail.us5.list-manage.com/subscribe/post?u=7e99b339d496a6c7b1139d4fc&amp;amp;id=6cb1abe378" method=post id=mc-embedded-subscribe-form name=mc-embedded-subscribe-form class=validate target=_blank novalidate><div id=mc_embed_signup_scroll class=flex><div class="mc-field-group sm:max-w-lg w-full rounded-l-lg pl-2 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white text-xs outline-none flex"><input type=email name=EMAIL class="required email outline-none w-full focus:bg-white" placeholder=yourbest@email.com id=mce-EMAIL></div><div style=position:absolute;left:-5000px aria-hidden=true><input type=text name=b_7e99b339d496a6c7b1139d4fc_6cb1abe378 tabindex=-1></div><div class="clear cursor-pointer px-4 rounded-r-lg bg-red-400 hover:bg-red-500 p-3 border-red-500 border-t border-r"><input type=submit value=Subscribe name=subscribe id=mc-embedded-subscribe class="button text-white text-xs uppercase bg-transparent font-bold cursor-pointer"></div></div></form><div id=mce-responses class=clear><div class=response id=mce-error-response style=display:none></div><div class=response id=mce-success-response style=display:none></div></div></div></div></div><div class="border-t border-gray-300 mt-4 text-xs text-center p-4">All rights reserved. <b>&copy;</b>
+André de Moraes,
+2021</div></div></div></footer></body></html>

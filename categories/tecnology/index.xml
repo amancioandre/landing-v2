@@ -1,27 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tecnology on André de Moraes</title>
-    <link>http://127.0.0.1:8080/categories/tecnology/</link>
-    <description>Recent content in Tecnology on André de Moraes</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <managingEditor>amancioandre@gmail.com (André de Moraes)</managingEditor>
-    <webMaster>amancioandre@gmail.com (André de Moraes)</webMaster>
-    <lastBuildDate>Mon, 03 Dec 2018 18:45:18 -0300</lastBuildDate>
-    
-	<atom:link href="http://127.0.0.1:8080/categories/tecnology/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Economy and Research must be Integrated</title>
-      <link>http://127.0.0.1:8080/posts/2018-12-03-economy-and-research/</link>
-      <pubDate>Mon, 03 Dec 2018 18:45:18 -0300</pubDate>
-      <author>amancioandre@gmail.com (André de Moraes)</author>
-      <guid>http://127.0.0.1:8080/posts/2018-12-03-economy-and-research/</guid>
-      <description>That was the headline from Valor&amp;rsquo;s article on tendencies from October, 2018, that struck me earlier this month and kept me thinking about the time I spent doing research for my master degree. Let me resume the Ediane Tiago’s article main points for you and hopefully we will start building up ground for how to tackle Brazilian politics on innovation.
-  1. Converging Forces Ediane Tiago states that Brazilian economy is going to face two converging forces: advances on digitization and on science, both interdependent but rather miscoordinated either by government or corporations.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tecnology on André de Moraes</title><link>http://127.0.0.1:8080/categories/tecnology/</link><description>Recent content in Tecnology on André de Moraes</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>amancioandre@gmail.com (André de Moraes)</managingEditor><webMaster>amancioandre@gmail.com (André de Moraes)</webMaster><lastBuildDate>Mon, 03 Dec 2018 18:45:18 -0300</lastBuildDate><atom:link href="http://127.0.0.1:8080/categories/tecnology/index.xml" rel="self" type="application/rss+xml"/><item><title>Economy and Research must be Integrated</title><link>http://127.0.0.1:8080/posts/2018-12-03-economy-and-research/</link><pubDate>Mon, 03 Dec 2018 18:45:18 -0300</pubDate><author>amancioandre@gmail.com (André de Moraes)</author><guid>http://127.0.0.1:8080/posts/2018-12-03-economy-and-research/</guid><description>That was the headline from Valor&amp;rsquo;s article on tendencies from October, 2018, that struck me earlier this month and kept me thinking about the time I spent doing research for my master degree. Let me resume the Ediane Tiago’s article main points for you and hopefully we will start building up ground for how to tackle Brazilian politics on innovation.
+1. Converging Forces Ediane Tiago states that Brazilian economy is going to face two converging forces: advances on digitization and on science, both interdependent but rather miscoordinated either by government or corporations.</description></item></channel></rss>
