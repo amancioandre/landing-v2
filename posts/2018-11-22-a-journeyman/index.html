@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+
+</html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/styles.min.690a841b9133288485bbf931cd6128c9170b8363dd29499475b06225cc00eac0.css" integrity="sha256-aQqEG5EzKISFu/kxzWEoyRcLg2PdKUmUdbBiJcwA6sA=" />
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/plugin/relativeTime.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+    <script src="/js/numbers.min.js"></script>
+
+    
+    <script src="/js/api.min.js"></script>
+</head>
+
+<body>
+    <header>
+    <div class="hidden lg:block">
+        <style>
+    .scale-in-center {
+        -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+
+     
+
+     
+    @-webkit-keyframes scale-in-center {
+        0% {
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes scale-in-center {
+        0% {
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+</style>
+
+<a class="absolute top-0 right-16" href="https://www.victoria.ca/#" target="_blank">
+    <div class="absolute bg-red-500 transform rotate-45 shadow-lg"
+        style="top: 34px; left: 6px; width: 28px; height: 28px;">
+    </div>
+    <div id="flag"
+        class="w-10 h-12 bg-red-500 text-center text-light text-2xl py-3 transform">
+        <i class="fab fa-canadian-maple-leaf text-white"></i>
+    </div>
+</a>
+<span id="flag-text" class="
+        hidden
+        absolute
+        top-14
+        right-24
+        text-xs
+        w-28
+        p-2
+        rounded-sm
+        transform
+        transition-all
+        duration-300
+        ease-in-out
+        ">
+    Currently living in <b>
+        Victoria</b>,
+    BC,
+    Canada </span>
+
+<script>
+    const flag = document.getElementById("flag")
+    const flagText = document.getElementById("flag-text")
+
+    flag.addEventListener("mouseenter", () => {
+        flagText.classList.replace("hidden", "block")
+        flagText.classList
+    })
+
+    flag.addEventListener("mouseleave", () => {
+        flagText.classList.replace("block", "hidden")
+    })
+</script>
+    </div>
+    <aside id="sidedrawer" class="
+    transform
+    absolute
+    top-14
+    left-0
+    bg-white
+    z-50
+    w-full
+    min-h-screen
+    ease-in-out
+    transition-all
+    duration-300
+    -translate-x-full
+    ">
+    <div class="px-8 mt-4">
+        <div class="flex flex-col">
+            <ul class="
+            flex 
+            flex-col 
+            justify-around
+            content-start
+            text-sm
+            h-20
+            ">
+                <li class="px-2 lowercase hover:text-red-500 ">
+    <a href="http://127.0.0.1:8080/">Home</a>
+</li><li class="px-2 lowercase hover:text-red-500 ">
+    <a href="http://127.0.0.1:8080/about">About</a>
+</li><li class="px-2 lowercase hover:text-red-500 ">
+    <a href="http://127.0.0.1:8080/categories">Explore</a>
+</li>
+            </ul>
+            <ul class="
+                mt-6
+                flex
+                flex-none
+                justify-start
+                content-start
+                text-2xl
+            ">
+                <li class="hover:animate-bounce">
+    <a href="https://www.linkedin.com/amancioandre" target="_blank">
+        <i class="px-2 fab fa-linkedin-in hover:text-red-500"></i>
+    </a>
+</li>
+<li class="hover:animate-bounce">
+    <a href="https://www.instagram.com/andre_amoraes" target="_blank">
+        <i class="px-2 fab fa-instagram hover:text-red-500"></i>
+    </a>
+</li>
+<li class="hover:animate-bounce">
+    <a href="https://www.github.com/amancioandre" target="_blank">
+        <i class="px-2 fab fa-github-alt hover:text-red-500"></i>
+    </a>
+</li>
+            </ul>
+        </div>
+    </div>
+</aside>
+    <nav class="mb-4">
+        <div class="max-w-5xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+                
+                <div class="w-full sm:hidden px-6 flex justify-between">
+                    
+                    <div id="menu-burger" class="cursor-pointer hover:text-red-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </div>
+                    <div class="w-full flex justify-center">
+                        <p class="font-sans tracking tighter text-3xl">André de Moraes</p>
+                    </div>
+                </div>
+                
+                <div class="
+                        w-full
+                        hidden
+                        sm:flex
+                        flex-row
+                        flex-nowrap
+                        justify-end
+                        items-center
+                    ">
+                    <div class="self-center mr-auto">
+                        <p class="font-sans tracking tighter text-xl">André de Moraes</p>
+                    </div>
+                    <ul class=" flex flex-none justify-center content-center items-center text-xs">
+                        <li class="px-2 lowercase hover:text-red-500 ">
+    <a href="http://127.0.0.1:8080/">Home</a>
+</li><li class="px-2 lowercase hover:text-red-500 ">
+    <a href="http://127.0.0.1:8080/about">About</a>
+</li><li class="px-2 lowercase hover:text-red-500 ">
+    <a href="http://127.0.0.1:8080/categories">Explore</a>
+</li> </ul>
+                    <ul class="ml-6 flex flex-none justify-center content-center text-lg">
+                        <li class="hover:animate-bounce">
+    <a href="https://www.linkedin.com/amancioandre" target="_blank">
+        <i class="px-2 fab fa-linkedin-in hover:text-red-500"></i>
+    </a>
+</li>
+<li class="hover:animate-bounce">
+    <a href="https://www.instagram.com/andre_amoraes" target="_blank">
+        <i class="px-2 fab fa-instagram hover:text-red-500"></i>
+    </a>
+</li>
+<li class="hover:animate-bounce">
+    <a href="https://www.github.com/amancioandre" target="_blank">
+        <i class="px-2 fab fa-github-alt hover:text-red-500"></i>
+    </a>
+</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        let isOpen = false
+        const openSideDrawer = () => {
+            const sidedrawer = document.getElementById("sidedrawer")
+            if (!isOpen) {
+                sidedrawer.classList.replace("-translate-x-full", "translate-x-0")
+            } else {
+                sidedrawer.classList.replace("translate-x-0", "-translate-x-full")
+            }
+            isOpen = !isOpen
+        }
+
+        document.getElementById("menu-burger").addEventListener("click", openSideDrawer)
+    </script>
+</header>
+    
+
+<div class="max-w-5xl mx-auto px-2 sm:px-6 lg:px-8 mb-6 mt-4">
+    <div class="flex justify-center">
+        
+        <aside class="hidden sm:block w-1/5 pr-4">
+    <div class="mb-6">
+        <h3 class="text-lg font-bold mb-2">About</h3>
+        <p class="text-xs">
+            An example about
+        </p>
+    </div>
+    <div class="sticky top-6 max-h-64">
+        
+        <h3 class="text-lg font-bold mb-2">Contents</h3>
+        <p class="text-xs hover:text-red-500">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#the-common-world">The Common World</a></li>
+    <li><a href="#the-adventure-call-and-refusing-it">The Adventure Call and Refusing It</a></li>
+    <li><a href="#finding-your-mentor-and-the-first-crossing">Finding your Mentor and the First Crossing</a></li>
+    <li><a href="#provings-allies-and-enemies">Provings, Allies and Enemies</a></li>
+    <li><a href="#ressurection-and-regression">Ressurection and Regression</a></li>
+  </ol>
+</nav>
+        </p>
+        
+        <h3 class="text-lg font-bold mt-6 mb-2">More posts about</h3>
+        <div class="text-xs mb-6">
+            <ul>
+                
+                
+                <li class="hover:text-red-500">
+                    <a href="/categories/heros-journey">Hero&#39;s Journey</a>
+                </li>
+                
+                
+                
+                <li class="hover:text-red-500">
+                    <a href="/categories/apprenticeship">Apprenticeship</a>
+                </li>
+                
+                
+                
+                <li class="hover:text-red-500">
+                    <a href="/categories/developer">Developer</a>
+                </li>
+                
+                
+                
+                <li class="hover:text-red-500">
+                    <a href="/categories/self-discovery">Self Discovery</a>
+                </li>
+                
+                
+            </ul>
+        </div>
+        <div class="flex justify-end">
+            
+            <button id="share-button" class="m-2 cursor-pointer">
+                <div id="tooltip" class="opacity-0 text-xs text-gray-500">
+                    copied!
+                </div>
+                <div class="hover:text-red-500 flex justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+</svg>
+                </div>
+            </button>
+        </div>
+    </div>
+</aside>
+
+<script>
+    const shareButton = document.getElementById("share-button")
+    const tooltip = document.getElementById("tooltip")
+
+    const copyToClipboard = () => {
+        navigator.clipboard.writeText(window.location)
+        tooltip.classList.replace("opacity-0", "animate-fade-in-up")
+
+        setTimeout(() => {
+            tooltip.classList.replace("animate-fade-in-up", "opacity-0")
+        }, 650)
+    }
+
+    shareButton.addEventListener("click", copyToClipboard)
+</script>
+        <article class="sm:w-4/5 pl-4">
+    <header>
+        <h1 class="text-4xl font-bold mt-0 mb-0">A Journeyman</h1>
+        <time datetime='2018-11-22 17:38'>
+            <span class="text-sm text-gray-400">
+                November 22, 2018 17:38
+            </span>
+        </time>
+    </header>
+    <div class="my-8">
+        <p>The term Hero&rsquo;s Journey was first brought to us by the anthropologist <strong>Joseph Campbell</strong> on this book <a href="">&ldquo;The Hero with a Thousand Faces&rdquo;</a> which describes the fundamental narrative of the mono-myth that bases the histories of many historical myths, such as <em>Buddha</em>, <em>Christ</em>, <em>Moses</em>, etc.</p>
+<p>Today it is also used to build modern narratives, with <a href=""><strong>Luke Skywalker</strong></a>, William Wallace, Frodo Baggins and almost any hero you can think of. Although strongly debated within Psychological Schools, the concept is still very present and influential on our society, so much so that we can feel them deeply embedded into us. Have you ever wandered, or looked over, your own life as an Hero&rsquo;s Journey? I did, and it is liberating.</p>
+<!-- raw HTML omitted -->
+<figure>
+    <img src="https://miro.medium.com/max/1000/0*5MO7Y9Q1sMfJAZI0"/> <figcaption>
+            <h4>Photo by Andrew DesLauriers on Unsplash</h4>
+        </figcaption>
+</figure>
+
+<h2 id="the-common-world">The Common World</h2>
+<p>This is very difficult to understand and separate when you try to look at your past following certain contexts. But I encourage you to try, from an holistc point of view or your recent past: on which episode were you surrounded by mundane decisions and a rhythmic routine? For me, not long ago, I saw myself doing less of what I am capable of, in a lousy job I was employed. Days came and went, events, emails, paperwork, messages and phone calls with suppliers. Routine you might conclude? Yes.</p>
+<p>During my engineering school and masters I&rsquo;ve been always striving to learn more, beyond what the sole mechanical engineering could teach. I&rsquo;ve pursued entrepreneurial skills, read and practiced economics engineering, business modelling, customer development, basic marketing and sales. I&rsquo;ve also loved to learn about <strong>Technology Roadmapping</strong> and <strong>Product Development</strong>, I&rsquo;ve even have a <a href="">master thesis</a> published on that subject. {{ highlight }}But I felt misplaced, wherever I went, always felt unease.{{ end }} Maybe because I ran from this tingling sensation the unknown have on us.</p>
+<h2 id="the-adventure-call-and-refusing-it">The Adventure Call and Refusing It</h2>
+<p>However, when I was at this operations job, something made sense. The company needed a best logical way to track assets on ground and I, as an engineer, proposed to solve this issue through a mobile application: home brewing it due to lack of budget. As I struggle to learn development languages this demanded <code>I remembered how many times I denied really learning C/C++ and Java during college</code>.</p>
+<h2 id="finding-your-mentor-and-the-first-crossing">Finding your Mentor and the First Crossing</h2>
+<p>Have you ever believed so much in something? It&rsquo;s at this moment you rejoice yourself that you are alive to think of that. You got to look at it with maturity, <a href="https://www.amazon.com.br/Cem-dias-entre-c%C3%A9u-mar/dp/8535906428/ref=asc_df_8535906428/?tag=googleshopp00-20&amp;linkCode=df0&amp;hvadid=379725247674&amp;hvpos=&amp;hvnetw=g&amp;hvrand=9112288151138824176&amp;hvpone=&amp;hvptwo=&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=1001773&amp;hvtargid=pla-398225618598&amp;psc=1">Amyr Klynk</a> would say:</p>
+<blockquote>
+<p>&ldquo;First I look at this idea very passionately, but after some time, very coldly&rdquo;
+when he developed his plans to cross the Atlantic rowing a small boat. So, the crossing is first acceptance, you accept the challenge and let yourself feel the obligation you&rsquo;ve made with yourself. Sometimes you&rsquo;ll have a <a href="https://www.google.com/search?q=mentor&amp;oq=mentor&amp;aqs=chrome..69i57j69i60.969j0j4&amp;sourceid=chrome&amp;ie=UTF-8">mentor</a> to help you with that challange - more or less the same way <a href="https://www.amazon.com/Lord-Rings-J-R-R-Tolkien/dp/0544003411">Gandalf, The Grey</a> is to Frodo. But sometimes, not. My first <em>mentor</em> was a collection of YouTube videos, somewhat disconnected among themselves, barely scratching what I needed to know back then.</p>
+</blockquote>
+<p>Unfortunately my desk job was no longer satisfying myself and the company had no available positions to keep someone in that mobile project as a learning developer. Announced tragedy, but yet a blow. I had some savings to endure a couple of months of unemployment, but I was sure, definetely sure, this could not be like that. The time I had I filled with study, deep study, on programming. Started with Javascript and moved myself along the lines of <strong>web development</strong> with HTML, CSS, SASS, NodeJS and React. Those YouTube videos took shape into very famous online tutors: <a href="https://www.linkedin.com/in/coltsteele/">Colt Steele</a>, <a href="https://www.linkedin.com/in/maximilian-schwarzm%C3%BCller-66b152a5/?originalSubdomain=de">Max Schwarzmüller</a>, <a href="http://codingheroes.io/">Jonas Schmedtmann</a> and <a href="https://shiffman.net/">Dan Shiffman</a> - Mr. Dan Shiffman, I would love to meet you in person! If he reads this one day.</p>
+<p>The next step: formalize the skill set I was brewing. The reserves I had were enough, so I though of a <a href="">Bootcamp</a> abroad, but I couldn&rsquo;t leave wife and dog here unsupported. However I got the chance of studying with the first cohort of a newcoming bootcamp to Brazil, and for that I am lucky - I had several mentors there.</p>
+<h2 id="provings-allies-and-enemies">Provings, Allies and Enemies</h2>
+<p>I know that you are well aware of how challenging decisions that lead you into your own dungeons are. You must face fears you thought were very well tamed growing up, only to know they were unleashed but dormant: you don&rsquo;t dominate the topic, you are old and not fully established.</p>
+<h3 id="trauma">Trauma</h3>
+<figure>
+    <img src="https://miro.medium.com/max/500/1*w6ODBTNYvgkaqJ4wVTvOYg.jpeg"/> <figcaption>
+            <h4>Als auf deutsch Traum - Max Von Sydow, Scorcese&#39;s Shutter Island</h4>
+        </figcaption>
+</figure>
+
+<p>This quest is yet to resolve and no one is naive enough not to see the deep abyss comming. The revelation time. But, as any challenge, it can be surpassed, taking action to build up muscle for this task in a day by day struggle. Maybe you will remember and relate to the ending of your college or graduation, a time which is common to feel groundless. For me it came after I has my master&rsquo;s degree and saw myself in a tourbillon of events that led Brazilian economy to disaster. Being an freshman entrepreneur in the leisure boating market at that time was harsh and costed me a lot: money and health, mind and body.</p>
+<p>Most certainly this abyss will reveal itself, the beast living in it will take what is his. And we will not be taken by surprise as when we were younglings tasting life for the first time, yet it will be bitter, however traumatic we may rise victorious only to live another pathway.</p>
+<h2 id="ressurection-and-regression">Ressurection and Regression</h2>
+<p>Maybe it will take something of value, but not all. As I am typing this loose words, memories of hard times are coming to mind, as humbling as it can be. These are the moments we must value friends the most, those who hear us, bless our spirits. Be reborn, like a dream, and remember Gandalf:</p>
+<blockquote>
+<p>&ldquo;End? No, the journey doesn&rsquo;t end here. Death is just another path, one that we all must take. The grey rain-curtain of this world rolls back, and all turns to silver glass, and then you see it. [&hellip;]</p>
+</blockquote>
+<p>What lies ahead for you? Can you ever wonder how shinning will be the feeling of peaceful admiration, despite of the day it arises? Can you imagine what you will bring to surface, the stories, the things you wished to build taking form and growing along with you, shaped by your events and the hands that found you along the journey? Will you look grateful to those that saw on you themselves many ages ago, today torn and made by their own adventures? Will you admire the same leaders, or are they, today, your peers?</p>
+
+
+        <br>
+        <span class="text-xl">
+            🍻
+        </span>
+        <br>
+        <span class="text-sm">André</span>
+    </div>
+</article>
+        
+    </div>
+</div>
+
+
+    <footer class="relative bottom-0 w-full">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between flex-col">
+            
+            <div class="w-full sm:hidden px-6 flex flex-col content-center">
+                <div class="mb-1">
+                    <p class="text-xs">Please, consider subscribing:</p>
+                </div>
+                
+
+<div id="mc_embed_signup">
+    <form action="https://gmail.us5.list-manage.com/subscribe/post?u=7e99b339d496a6c7b1139d4fc&amp;amp;id=6cb1abe378" method="post" id="mc-embedded-subscribe-form"
+        name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll" class="flex">
+            <div
+                class="mc-field-group sm:max-w-lg w-full rounded-l-lg pl-2 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white text-xs outline-none flex">
+                <input type="email" value="" name="EMAIL" class="required email outline-none w-full focus:bg-white"
+                    placeholder='yourbest@email.com' id="mce-EMAIL">
+            </div>
+            
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                    name="b_7e99b339d496a6c7b1139d4fc_6cb1abe378" tabindex="-1" value=""></div>
+            <div
+                class="clear cursor-pointer px-4 rounded-r-lg bg-red-400 hover:bg-red-500 p-3  border-red-500 border-t border-r ">
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                    class="button text-white text-xs uppercase bg-transparent font-bold cursor-pointer">
+            </div>
+        </div>
+    </form>
+    <div id="mce-responses" class="clear">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+    </div>
+</div>
+
+
+            </div>
+            
+            <div class="
+                    w-full
+                    hidden
+                    sm:flex
+                    flex-nowrap
+                    justify-center
+                    content-center
+                ">
+                <div>
+                    <div class="mb-1">
+                        <p class="text-xs max-w-sm">
+                            Hey, you&#39;ve reached all the way down here! If you liked the content, please, consider subscribing!
+                        </p>
+                    </div>
+                    
+
+<div id="mc_embed_signup">
+    <form action="https://gmail.us5.list-manage.com/subscribe/post?u=7e99b339d496a6c7b1139d4fc&amp;amp;id=6cb1abe378" method="post" id="mc-embedded-subscribe-form"
+        name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll" class="flex">
+            <div
+                class="mc-field-group sm:max-w-lg w-full rounded-l-lg pl-2 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white text-xs outline-none flex">
+                <input type="email" value="" name="EMAIL" class="required email outline-none w-full focus:bg-white"
+                    placeholder='yourbest@email.com' id="mce-EMAIL">
+            </div>
+            
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                    name="b_7e99b339d496a6c7b1139d4fc_6cb1abe378" tabindex="-1" value=""></div>
+            <div
+                class="clear cursor-pointer px-4 rounded-r-lg bg-red-400 hover:bg-red-500 p-3  border-red-500 border-t border-r ">
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                    class="button text-white text-xs uppercase bg-transparent font-bold cursor-pointer">
+            </div>
+        </div>
+    </form>
+    <div id="mce-responses" class="clear">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+            <div class="border-t border-gray-300 mt-4 text-xs text-center p-4">
+                All rights reserved. <b>&copy;</b>
+                André de Moraes,
+                2021
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>

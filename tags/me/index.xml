@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Me on André de Moraes</title>
+    <link>http://127.0.0.1:8080/tags/me/</link>
+    <description>Recent content in Me on André de Moraes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>amancioandre@gmail.com (André de Moraes)</managingEditor>
+    <webMaster>amancioandre@gmail.com (André de Moraes)</webMaster>
+    <lastBuildDate>Thu, 22 Nov 2018 17:38:37 -0300</lastBuildDate>
+    
+	<atom:link href="http://127.0.0.1:8080/tags/me/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Journeyman</title>
+      <link>http://127.0.0.1:8080/posts/2018-11-22-a-journeyman/</link>
+      <pubDate>Thu, 22 Nov 2018 17:38:37 -0300</pubDate>
+      <author>amancioandre@gmail.com (André de Moraes)</author>
+      <guid>http://127.0.0.1:8080/posts/2018-11-22-a-journeyman/</guid>
+      <description>The term Hero&amp;rsquo;s Journey was first brought to us by the anthropologist Joseph Campbell on this book &amp;ldquo;The Hero with a Thousand Faces&amp;rdquo; which describes the fundamental narrative of the mono-myth that bases the histories of many historical myths, such as Buddha, Christ, Moses, etc.
+Today it is also used to build modern narratives, with Luke Skywalker, William Wallace, Frodo Baggins and almost any hero you can think of. Although strongly debated within Psychological Schools, the concept is still very present and influential on our society, so much so that we can feel them deeply embedded into us.</description>
+    </item>
+    
+  </channel>
+</rss>
