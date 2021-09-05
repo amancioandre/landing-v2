@@ -10,5 +10,15 @@
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
     "tailwindcss": "^2.2.7"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "rimraf": "^3.0.2"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist/",
+    "build": "hugo",
+    "predeploy": "yarn build",
+    "deploy": "yarn gh-pages -d build"
   }
 }
