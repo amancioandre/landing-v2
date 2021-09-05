@@ -2,17 +2,21 @@
 title: "A Journeyman"
 date: 2018-11-22T17:38:37-03:00
 type: "post"
-draft: true
+draft: false
 featured-img: "https://miro.medium.com/max/1000/0*5MO7Y9Q1sMfJAZI0"
 topics:
     - "Carreer"
     - "Self"
-tags: []
+tags:
+    - "Career"
+    - "Self"
+    - "Me"
 categories:
     - "Hero\'s Journey"
     - "Apprenticeship"
     - "Developer"
-description: ""
+    - "Self Discovery"
+description: "About my own discover as a programmer"
 ---
 
 The term Hero's Journey was first brought to us by the anthropologist **Joseph Campbell** on this book ["The Hero with a Thousand Faces"]() which describes the fundamental narrative of the mono-myth that bases the histories of many historical myths, such as _Buddha_, _Christ_, _Moses_, etc.
@@ -31,16 +35,16 @@ During my engineering school and masters I've been always striving to learn more
 
 ## The Adventure Call and Refusing It
 
-However, when I was at this operations job, something made sense. The company needed a best logical way to track assets on ground and I, as an engineer, proposed to solve this issue through a mobile application: home brewing it due to lack of budget. As I struggle to learn development languages this demanded {{<highlight html>}} I remembered how many times I denied really learning C/C++ and Java during college {{</highlight>}}.
+However, when I was at this operations job, something made sense. The company needed a best logical way to track assets on ground and I, as an engineer, proposed to solve this issue through a mobile application: home brewing it due to lack of budget. As I struggle to learn development languages this demanded `I remembered how many times I denied really learning C/C++ and Java during college`.
 
 ## Finding your Mentor and the First Crossing
 
-Have you ever believed so much in something? It's at this moment you rejoice yourself that you are alive to think of that. You got to look at it with maturity, [Amyr Klynk]() would say:
+Have you ever believed so much in something? It's at this moment you rejoice yourself that you are alive to think of that. You got to look at it with maturity, [Amyr Klynk](https://www.amazon.com.br/Cem-dias-entre-c%C3%A9u-mar/dp/8535906428/ref=asc_df_8535906428/?tag=googleshopp00-20&linkCode=df0&hvadid=379725247674&hvpos=&hvnetw=g&hvrand=9112288151138824176&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001773&hvtargid=pla-398225618598&psc=1) would say:
 
 > "First I look at this idea very passionately, but after some time, very coldly"
-> when he developed his plans to cross the Atlantic rowing a small boat. So, the crossing is first acceptance, you accept the challenge and let yourself feel the obligation you've made with yourself. Sometimes you'll have a [mentor]() to help you with that challange - more or less the same way [Gandalf, The Grey]() is to Frodo. But sometimes, not. My first _mentor_ was a collection of YouTube videos, somewhat disconnected among themselves, barely scratching what I needed to know back then.
+> when he developed his plans to cross the Atlantic rowing a small boat. So, the crossing is first acceptance, you accept the challenge and let yourself feel the obligation you've made with yourself. Sometimes you'll have a [mentor](https://www.google.com/search?q=mentor&oq=mentor&aqs=chrome..69i57j69i60.969j0j4&sourceid=chrome&ie=UTF-8) to help you with that challange - more or less the same way [Gandalf, The Grey](https://www.amazon.com/Lord-Rings-J-R-R-Tolkien/dp/0544003411) is to Frodo. But sometimes, not. My first _mentor_ was a collection of YouTube videos, somewhat disconnected among themselves, barely scratching what I needed to know back then.
 
-Unfortunately my desk job was no longer satisfying myself and the company had no available positions to keep someone in that mobile project as a learning developer. Announced tragedy, but yet a blow. I had some savings to endure a couple of months of unemployment, but I was sure, definetely sure, this could not be like that. The time I had I filled with study, deep study, on programming. Started with Javascript and moved myself along the lines of **web development** with HTML, CSS, SASS, NodeJS and React. Those YouTube videos took shape into very famous online tutors: [Colt Steele](), [Max Schwarzmüller](), [Jonas Schmedtmann]() and [Dan Shiffman]() - Mr. Dan Shiffman, I would love to meet you in person! If he reads this one day.
+Unfortunately my desk job was no longer satisfying myself and the company had no available positions to keep someone in that mobile project as a learning developer. Announced tragedy, but yet a blow. I had some savings to endure a couple of months of unemployment, but I was sure, definetely sure, this could not be like that. The time I had I filled with study, deep study, on programming. Started with Javascript and moved myself along the lines of **web development** with HTML, CSS, SASS, NodeJS and React. Those YouTube videos took shape into very famous online tutors: [Colt Steele](https://www.linkedin.com/in/coltsteele/), [Max Schwarzmüller](https://www.linkedin.com/in/maximilian-schwarzm%C3%BCller-66b152a5/?originalSubdomain=de), [Jonas Schmedtmann](http://codingheroes.io/) and [Dan Shiffman](https://shiffman.net/) - Mr. Dan Shiffman, I would love to meet you in person! If he reads this one day.
 
 The next step: formalize the skill set I was brewing. The reserves I had were enough, so I though of a [Bootcamp]() abroad, but I couldn't leave wife and dog here unsupported. However I got the chance of studying with the first cohort of a newcoming bootcamp to Brazil, and for that I am lucky - I had several mentors there.
 
