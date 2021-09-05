@@ -7,7 +7,7 @@ author:
   email: "amancioandre@gmail.com"
 
 baseURL: "https://amancioandre.github.io/landing-v2"
-canonifyURLs: true 
+canonifyURLs: false 
 
 theme: "amnc"
 
