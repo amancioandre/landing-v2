@@ -16,7 +16,7 @@
     "rimraf": "^3.0.2"
   },
   "scripts": {
-    "prebuild": "rimraf dist/",
+    "prebuild": "rimraf public/",
     "build": "hugo",
     "predeploy": "yarn build",
     "deploy": "yarn gh-pages -d build"
