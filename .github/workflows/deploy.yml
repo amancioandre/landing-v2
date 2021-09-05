@@ -1,0 +1,29 @@
+name: CI/CD
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-test-deploy:
+    runs-on: ubuntu-lastest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Update Theme
+        run: git submodule update --init --recursive
+      - name: Setup Hugo
+        uses: peaceiris/acitons-hugo@v2
+        with:
+          hugo-version: "0.68.3"
+      - name: Build
+        run: hugo --minify
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.TOKEN }}
+          # external_repository: amancioandre/amancioandre.github.io
+          publish_dir: ./public
+          # keep_files: true
+          user_name: amancioandre
+          user_email: amancioandre@gmail.com
+          # cname: example.com
