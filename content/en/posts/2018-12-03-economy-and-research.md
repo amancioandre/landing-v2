@@ -2,12 +2,21 @@
 title: "Economy and Research must be Integrated"
 date: 2018-12-03T18:45:18-03:00
 type: "post"
-draft: true
+draft: false
 featured-img: "https://miro.medium.com/max/4896/0*Y9v4_7v357dFeOQQ"
-topics: []
-tags: []
-categories: []
-description: ""
+topics: 
+    - "Economy"
+    - "Research"
+    - "Technology"
+tags:
+    - "Economy"
+    - "Research"
+    - "Technology"
+categories:
+    - "Economy"
+    - "Research"
+    - "Tecnology"
+description: "Summary of Ediane Tiago\'s article main points"
 ---
 
 That was the headline from Valor's article on tendencies from October, 2018, that struck me earlier this month and kept me thinking about the time I spent doing research for my master degree. Let me resume the Ediane Tiago’s article main points for you and hopefully we will start building up ground for how to tackle Brazilian politics on innovation.
