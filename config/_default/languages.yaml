@@ -1,34 +1,34 @@
 en:
-    languageName: "English"
-    weight: 1
-    contentDir: "content/en"
-    menu:
-        links:
-            - name: "home"
-              url: "/"
-              weight: 1
-            - name: "about"
-              url: "/about"
-              weight: 2
-            - name: "explore"
-              url: "/categories"
-              weight: 3
-    params:
-        about: "An example about"
+  languageName: "English"
+  weight: 1
+  contentDir: "content/en"
+  menu:
+    links:
+      - name: "home"
+        url: ""
+        weight: 1
+      - name: "about"
+        url: "about/"
+        weight: 2
+      - name: "explore"
+        url: "categories/"
+        weight: 3
+  params:
+    about: "I'm a Software Engineer, defender of teams, thinker then doer, visionary, drawer of funny specimens and advocate of change!"
 pt-br:
-    languageName: "Português"
-    weight: 2
-    contentDir: "content/pt-br"
-    menu:
-        links:
-            - name: "home"
-              url: "/pt-br"
-              weight: 1
-            - name: "about"
-              url: "/pt-br/about"
-              weight: 2
-            - name: "explore"
-              url: "/pt-br/categories"
-              weight: 3
-    params:
-        about: "An example about"
+  languageName: "Português"
+  weight: 2
+  contentDir: "content/pt-br"
+  menu:
+    links:
+      - name: "home"
+        url: "pt-br/"
+        weight: 1
+      - name: "about"
+        url: "pt-br/about/"
+        weight: 2
+      - name: "explore"
+        url: "pt-br/categories/"
+        weight: 3
+  params:
+    about: "Engenheiro de Software, defensor de times, penso antes de agir, visionário, desenhista de espécimes engraçados, advogado da mudança!"
