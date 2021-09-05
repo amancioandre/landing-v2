@@ -6,6 +6,9 @@ author:
   name: "André de Moraes"
   email: "amancioandre@gmail.com"
 
+baseURL: "https://amancioandre.github.io/landing-v2"
+canonifyURLs: true 
+
 theme: "amnc"
 
 permalinks:
