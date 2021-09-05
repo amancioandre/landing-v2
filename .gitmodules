@@ -1,3 +1,3 @@
 [submodule "themes/amnc"]
 	path = themes/amnc
-	url = git@github.com:amancioandre/template-amnc.git
+	url = https://github.com/amancioandre/template-amnc.git
