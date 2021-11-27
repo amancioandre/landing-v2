@@ -15,7 +15,7 @@ tags:
 categories:
     - "Economy"
     - "Research"
-    - "Tecnology"
+    - "Technology"
 description: "Summary of Ediane Tiago\'s article main points"
 ---
 

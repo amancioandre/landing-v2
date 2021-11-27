@@ -17,7 +17,7 @@ If you want to meet, please invite me for burgers, beers or ice cream!
 - 🔭 I’m currently working as Software Engineer for [PWR Lab](https://www.pwrlab.com).
 - 🌱 I’m currently learning [Machine Learning](<https://en.wikipedia.org/wiki/Machine_learning#:~:text=Machine%20learning%20(ML)%20is%20the,a%20part%20of%20artificial%20intelligence.&text=The%20study%20of%20mathematical%20optimization,the%20field%20of%20machine%20learning.>), [TypeScript](https://www.typescriptlang.org/), [NestJS](https://nestjs.com/) and [DDD](https://en.wikipedia.org/wiki/Domain-driven_design).
 - ✋ I’m looking to collaborate on educational, environmental and social projects.
-- 🥅 2021 Goals: Move to Canada 🇨🇦! :check:
+- 🥅 2021 Goals: Move to Canada 🇨🇦 ! ✅
 - 💬 Ask me about anything!
 - ⚡ Fun fact: I draw fun stuff that fit very well on merchandise for developers 👀
 
