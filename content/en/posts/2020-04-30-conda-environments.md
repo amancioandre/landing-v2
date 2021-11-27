@@ -18,7 +18,7 @@ description: "Best practices for Conda Environments with Python"
 ---
 
 No more tears!
-If you are a user of conda packages, more precisely [Jupyter Notebook](), as I am, you should wory - a lot! - with your programming environment and your OS. Your _environment_ is one of the barriers that prevent you from cloging your system with all sorts of packages and their - conflicting - versions. Lets be honest, you don't want a crucial package being overwritten on your system do you?
+If you are a user of conda packages, more precisely [Jupyter Notebook](), as I am, you should worry - a lot! - with your programming environment and your OS. Your _environment_ is one of the barriers that prevent you from cloging your system with all sorts of packages and their - conflicting - versions. Lets be honest, you don't want a crucial package being overwritten on your system do you?
 
 So let's go!
 
